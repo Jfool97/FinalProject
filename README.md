@@ -144,7 +144,7 @@ Source: [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-r
 10. Log out from PostgreSQL: `# \q`. Then return to the *grader* user: `$ exit`.
 11. Inside the Flask application, the database connection is now performed with: 
 ```python
-engine = create_engine('postgresql://catalog:sillypassword@localhost/catalog')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 ```
 12. Setup the database with: `$ python /var/www/catalog/catalog/database_setup.py`.
 13. To prevent potential attacks from the outer world we double check that no remote connections to the database are allowed. Open the following file: `$ sudo nano /etc/postgresql/9.3/main/pg_hba.conf` and edit it, if necessary, to make it look like this: 
